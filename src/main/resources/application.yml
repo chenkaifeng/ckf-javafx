@@ -1,0 +1,39 @@
+widget:
+  # 控件版本（与POM文件定义同步）
+  version: @project.version@
+spring:
+  aop:
+    auto: false
+  main:
+    banner-mode: off
+  thymeleaf:
+    enabled: false
+    cache: false
+  jmx:
+    enabled: false
+  sql:
+    init:
+      enabled: false
+  mvc:
+    formcontent:
+      filter:
+        enabled: false
+  servlet:
+    multipart:
+      enabled: false
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      min-spare: 4
+      max: 4
+  port: 19888
+
+#证书保存目录和配置文件路径要求统一由SaveDirUtils获取
+cert:
+  # 证书保存目录，若为空则取SaveDirUtils的默认值
+  #save-dir:
+  # 证书配置文件保存路径，若为空则取SaveDirUtils的默认值
+  #config-path:
+  # 证书密码是否加密存储
+  encrypted: true

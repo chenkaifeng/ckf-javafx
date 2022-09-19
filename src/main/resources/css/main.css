@@ -1,0 +1,45 @@
+.bg {
+    -fx-background-color: linear-gradient(to left, #fff, #e6dada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.primary {
+    -fx-background-color: linear-gradient(to left, #c91e1e, #c91e1e);
+    -fx-text-fill: 	#fff;
+}
+
+.header {
+    -fx-font-weight: normal;
+    -fx-text-alignment: center;
+    -fx-cursor: default;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-background-insets: 0, 0, -1, 0;
+    -fx-padding: 6px 12px 6px 12px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-min-width: 80;
+}
+
+.font-55 {
+    -fx-font-size: 55pt;
+}
+
+.font-20 {
+    -fx-font-size: 20pt;
+    -fx-text-fill: 	#000;
+    -fx-font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    -fx-font-weight: bold;
+}
+
+
+.font-small {
+    -fx-text-fill: 	#fff;
+    -fx-font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    -fx-font-weight: bold;
+}
+
+.font-30 {
+    -fx-font-size: 30pt;
+}

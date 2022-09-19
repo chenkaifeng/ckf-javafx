@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ckf.ckfjavafx.module.MainController">
+    <VBox maxHeight="300.0" maxWidth="560.0" minHeight="300.0" minWidth="560.0" prefHeight="300.0" prefWidth="560.0" style="-fx-padding: 10; " styleClass="bg">
+        <stylesheets>
+            <URL value="@../css/main.css" />
+        </stylesheets>
+        <HBox prefWidth="850.0" VBox.vgrow="NEVER">
+            <GridPane HBox.hgrow="ALWAYS">
+                <columnConstraints>
+                    <ColumnConstraints maxWidth="320.0" minWidth="320.0" prefWidth="180.0" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <FlowPane alignment="CENTER_LEFT" prefHeight="57.0">
+                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <FlowPane.margin>
+                            <Insets left="5.0" />
+                        </FlowPane.margin>
+                        <Image url="@../image/logo.png" />
+                    </ImageView>
+                    <Label styleClass="font-20" text="示例程序">
+                        <effect>
+                            <Glow level="0.55" />
+                        </effect>
+                    </Label>
+
+                </FlowPane>
+            </GridPane>
+        </HBox>
+        <GridPane VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+            <StackPane>
+                <JFXButton fx:id="importButton" buttonType="RAISED" maxHeight="32.0" maxWidth="100.0" minHeight="32.0" minWidth="100.0" mnemonicParsing="false" onAction="#onImportButtonClicked" prefHeight="32.0" prefWidth="100.0" text="导入文件" StackPane.alignment="CENTER_LEFT" styleClass="primary">
+                </JFXButton>
+                <JFXButton fx:id="exitButton" accessibleText="安全退出" maxHeight="32.0" maxWidth="100.0" minHeight="32.0" minWidth="100.0" mnemonicParsing="false" onAction="#onExitButtonClicked" prefHeight="32.0" prefWidth="100.0" text="安全退出" StackPane.alignment="CENTER_RIGHT">
+                </JFXButton>
+            </StackPane>
+            <TableView fx:id="certTableView" cache="true" prefHeight="160.0" style="-fx-border-radius: 3; -fx-border-style: solid; -fx-border-width: 2; -fx-border-color: #286090;" styleClass="h6" GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn fx:id="nameCol" editable="false" prefWidth="157.0" text="文件名"/>
+                    <TableColumn fx:id="importTimeCol" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="导入时间" />
+                    <TableColumn fx:id="opCol" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" sortable="false" text="管理" />
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+                <GridPane.margin>
+                    <Insets top="15.0" />
+                </GridPane.margin>
+            </TableView>
+        </GridPane>
+        <effect>
+            <InnerShadow />
+        </effect>
+    </VBox>
+</StackPane>
