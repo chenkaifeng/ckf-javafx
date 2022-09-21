@@ -14,12 +14,11 @@ public class SaveDirUtils {
      * @return
      */
     public static String getRootSaveDir() {
-        //之前麒麟系统时，这里是user.dir，现由于兼容windows系统(user.dir可能需要管理员权限)，故统一改为user.home
         return System.getProperty("user.home");
     }
 
     /**
-     * 获取文件具体保存目录 建议：user.home\ckf-javafx-demo
+     * 获取文件具体保存目录
      * @return
      */
     public static String getFileSaveDir(){

@@ -69,14 +69,6 @@ public class CkfJavafxApplication extends AbstractJavaFxApplicationSupport imple
 		launch(CkfJavafxApplication.class, MainStageView.class, splash, args);
 	}
 
-	/**
-	 * 解决openjfx 8上运行报错 {@code java.lang.ClassNotFoundException: com.sun.deploy.uitoolkit.impl.fx.HostServicesFactory}
-	 * 的问题，详见 https://github.com/javafxports/openjdk-jfx/issues/540，覆写了 {@link AbstractJavaFxApplicationSupport}
-	 * 的 {@code start} 方法对 {@link javafx.application.HostServices} 的调用。
-	 *
-	 * @param stage 主场景
-	 * @throws Exception 异常
-	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public void start(Stage stage) throws Exception {
@@ -219,9 +211,6 @@ public class CkfJavafxApplication extends AbstractJavaFxApplicationSupport imple
 
 	/**
 	 * 创建系统托盘图标
-	 * 关于Linux上托盘图标不透明的问题是JDK6/7/8上的一个BUG，无法从Java代码层面修复，详见：
-	 * 1）https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6453521
-	 * 2) https://stackoverflow.com/questions/331407/java-trayicon-using-image-with-transparent-background
 	 */
 	private void installSystemTray() {
 		if (SystemTray.isSupported()) {

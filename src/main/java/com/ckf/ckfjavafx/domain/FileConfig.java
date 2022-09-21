@@ -12,7 +12,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FileConfig implements Cloneable, Serializable {
-    private static final long serialVersionUID = 1L;
 
     /**
      * 文件名称
@@ -29,13 +28,4 @@ public class FileConfig implements Cloneable, Serializable {
      */
     private String importTime;
 
-
-    @Override
-    public FileConfig clone() {
-        try {
-            return (FileConfig) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new AssertionError();
-        }
-    }
 }
